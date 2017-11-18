@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <ref name="VBox"/>
+    </start>
+    <define name="VBox">
+        <element name="VBox">
+            <optional>
+                <attribute name="fillWidth">
+                    <data type="boolean"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="layoutX">
+                    <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="layoutY">
+                    <data type="decimal"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="maxHeight">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="maxWidth">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="minHeight">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="minWidth">
+                    <data type="NMTOKEN"/>
+                </attribute>
+            </optional>
+            <attribute name="prefHeight">
+                <data type="decimal"/>
+            </attribute>
+            <attribute name="prefWidth">
+                <data type="decimal"/>
+            </attribute>
+            <optional>
+                <attribute name="snapToPixel">
+                    <data type="boolean"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="fx:controller">
+                    <data type="NCName"/>
+                </attribute>
+            </optional>
+            <zeroOrMore>
+                <ref name="children"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="children">
+        <element name="children">
+            <optional>
+                <element name="Button">
+                    <attribute name="layoutX">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="layoutY">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="mnemonicParsing">
+                        <data type="boolean"/>
+                    </attribute>
+                    <attribute name="onAction"/>
+                    <attribute name="text">
+                        <data type="NCName"/>
+                    </attribute>
+                    <optional>
+                        <attribute name="fx:id">
+                            <data type="NCName"/>
+                        </attribute>
+                    </optional>
+                </element>
+            </optional>
+            <choice>
+                <element name="HBox">
+                    <attribute name="layoutX">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="layoutY">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="prefHeight">
+                        <data type="decimal"/>
+                    </attribute>
+                    <attribute name="prefWidth">
+                        <data type="decimal"/>
+                    </attribute>
+                </element>
+                <zeroOrMore>
+                    <element name="TabPane">
+                        <optional>
+                            <attribute name="layoutX">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="minHeight">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="minWidth">
+                                <data type="NMTOKEN"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="prefHeight">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="prefWidth">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="tabClosingPolicy">
+                            <data type="NCName"/>
+                        </attribute>
+                        <zeroOrMore>
+                            <element name="tabs">
+                                <oneOrMore>
+                                    <element name="Tab">
+                                        <attribute name="text"/>
+                                        <zeroOrMore>
+                                            <element name="content">
+                                                <zeroOrMore>
+                                                    <element name="AnchorPane">
+                                                        <optional>
+                                                            <attribute name="minHeight">
+                                                                <data type="decimal"/>
+                                                            </attribute>
+                                                        </optional>
+                                                        <optional>
+                                                            <attribute name="minWidth">
+                                                                <data type="decimal"/>
+                                                            </attribute>
+                                                        </optional>
+                                                        <optional>
+                                                            <attribute name="prefHeight">
+                                                                <data type="decimal"/>
+                                                            </attribute>
+                                                        </optional>
+                                                        <optional>
+                                                            <attribute name="prefWidth">
+                                                                <data type="decimal"/>
+                                                            </attribute>
+                                                        </optional>
+                                                        <zeroOrMore>
+                                                            <ref name="children"/>
+                                                        </zeroOrMore>
+                                                    </element>
+                                                </zeroOrMore>
+                                            </element>
+                                        </zeroOrMore>
+                                    </element>
+                                </oneOrMore>
+                            </element>
+                        </zeroOrMore>
+                    </element>
+                </zeroOrMore>
+            </choice>
+            <zeroOrMore>
+                <choice>
+                    <ref name="VBox"/>
+                    <element name="Line">
+                        <attribute name="endX">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="layoutX">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="layoutY">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="rotate">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="scaleX">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="startX">
+                            <data type="decimal"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="translateX">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="translateY">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                    </element>
+                    <element name="MenuButton">
+                        <attribute name="layoutX">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="layoutY">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="mnemonicParsing">
+                            <data type="boolean"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="prefHeight">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="prefWidth">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="text">
+                            <data type="NCName"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="textAlignment">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="fx:id">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <element name="items">
+                            <oneOrMore>
+                                <element name="MenuItem">
+                                    <attribute name="mnemonicParsing">
+                                        <data type="boolean"/>
+                                    </attribute>
+                                    <attribute name="onAction"/>
+                                    <optional>
+                                        <attribute name="style"/>
+                                    </optional>
+                                    <attribute name="text"/>
+                                </element>
+                            </oneOrMore>
+                        </element>
+                    </element>
+                    <element name="Text">
+                        <optional>
+                            <attribute name="layoutX">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="layoutY">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="strokeType">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="strokeWidth">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="text"/>
+                        <optional>
+                            <attribute name="wrappingWidth">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="fx:id">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                    </element>
+                    <element name="TextField">
+                        <optional>
+                            <attribute name="editable">
+                                <data type="boolean"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="layoutX">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="layoutY">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="prefHeight">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <optional>
+                            <attribute name="prefWidth">
+                                <data type="decimal"/>
+                            </attribute>
+                        </optional>
+                        <attribute name="fx:id">
+                            <data type="NCName"/>
+                        </attribute>
+                    </element>
+                </choice>
+            </zeroOrMore>
+            <choice>
+                <zeroOrMore>
+                    <element name="RadioButton">
+                        <attribute name="mnemonicParsing">
+                            <data type="boolean"/>
+                        </attribute>
+                        <attribute name="onAction"/>
+                        <attribute name="text">
+                            <data type="NCName"/>
+                        </attribute>
+                        <attribute name="fx:id">
+                            <data type="NCName"/>
+                        </attribute>
+                    </element>
+                </zeroOrMore>
+                <group>
+                    <element name="ImageView">
+                        <attribute name="fitHeight">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="fitWidth">
+                            <data type="decimal"/>
+                        </attribute>
+                        <attribute name="preserveRatio">
+                            <data type="boolean"/>
+                        </attribute>
+                        <optional>
+                            <attribute name="fx:id">
+                                <data type="NCName"/>
+                            </attribute>
+                        </optional>
+                        <element name="image">
+                            <element name="Image">
+                                <attribute name="url"/>
+                            </element>
+                        </element>
+                    </element>
+                    <oneOrMore>
+                        <element name="Rectangle">
+                            <attribute name="arcHeight">
+                                <data type="decimal"/>
+                            </attribute>
+                            <attribute name="arcWidth">
+                                <data type="decimal"/>
+                            </attribute>
+                            <optional>
+                                <attribute name="disable">
+                                    <data type="boolean"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="fill"/>
+                            <attribute name="height">
+                                <data type="decimal"/>
+                            </attribute>
+                            <optional>
+                                <attribute name="layoutX">
+                                    <data type="decimal"/>
+                                </attribute>
+                            </optional>
+                            <optional>
+                                <attribute name="stroke">
+                                    <data type="NCName"/>
+                                </attribute>
+                            </optional>
+                            <attribute name="strokeType">
+                                <data type="NCName"/>
+                            </attribute>
+                            <attribute name="strokeWidth">
+                                <data type="decimal"/>
+                            </attribute>
+                            <attribute name="translateX">
+                                <data type="decimal"/>
+                            </attribute>
+                            <attribute name="translateY">
+                                <data type="decimal"/>
+                            </attribute>
+                            <attribute name="width">
+                                <data type="decimal"/>
+                            </attribute>
+                            <attribute name="fx:id">
+                                <data type="NCName"/>
+                            </attribute>
+                            <optional>
+                                <element name="stroke">
+                                    <element name="LinearGradient">
+                                        <attribute name="endX">
+                                            <data type="decimal"/>
+                                        </attribute>
+                                        <attribute name="endY">
+                                            <data type="decimal"/>
+                                        </attribute>
+                                        <element name="stops">
+                                            <oneOrMore>
+                                                <element name="Stop">
+                                                    <attribute name="color">
+                                                        <data type="NCName"/>
+                                                    </attribute>
+                                                    <optional>
+                                                        <attribute name="offset">
+                                                            <data type="decimal"/>
+                                                        </attribute>
+                                                    </optional>
+                                                </element>
+                                            </oneOrMore>
+                                        </element>
+                                    </element>
+                                </element>
+                            </optional>
+                        </element>
+                    </oneOrMore>
+                </group>
+            </choice>
+        </element>
+    </define>
+</grammar>

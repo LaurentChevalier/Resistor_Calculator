@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Resistor Calculator v0.02">
+    <output-path>$PROJECT_DIR$/out/artifacts/Resistor_Calculator_v0_02</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Resistor Calculator v0.02" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Resistor_Calculator_v0_02.jar">
+        <element id="module-output" name="Resistor Calculator v0.02" />
+      </element>
+    </root>
+  </artifact>
+</component>
